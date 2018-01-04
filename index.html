@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Progress Bar</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script src="js/get-request.js"></script>
+<script type="text/javascript">
+	getData();
+</script>
+<style type="text/css">
+progress {
+	text-align: center;
+	margin-top: 0.75em;
+	height: 1.5em;
+	width: 100%;
+	background-color: grey;
+	color: red;
+}
+progress:after {
+	content: attr(value) '%';
+}
+progress::-webkit-progress-bar {
+	background-color: grey;
+}
+
+progress::-webkit-progress-value {
+	background-color: green;
+}
+
+progress::-moz-progress-bar {
+	background-color: green;
+}
+
+.progress-danger::-moz-progress-bar {
+	background-color: red !important;
+}
+
+.progress-danger::-webkit-progress-value {
+	background-color: red !important;
+}
+
+.progress-normal::-moz-progress-bar {
+	background-color: green !important;
+}
+.progress-normal::-webkit-progress-value {
+	background-color: green !important;
+}
+</style>
+</head>
+<body>
+	<div class="jumbotron text-center">
+		<h1>Progress Bar Demo</h1>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h3>Select Progress Bar</h3>
+				<div id="progress-dropdown"></div>
+			</div>
+			<div class="col-sm-12">
+				<h3>Progress Bar</h3>
+				<div id="progress-bar"></div>
+			</div>
+			<div class="col-sm-12">
+				<h3>Buttons</h3>
+				<div id="progress-buttons"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
